@@ -1,0 +1,48 @@
+' Gambas module file
+
+Public IMU As New BerryIMU
+
+Public Sub MainFull()
+
+  While True
+
+    Print "Gyro:";
+    Print " x=" & Me.IMU.GyroX();
+    Print " y=" & Me.IMU.GyroY();
+    Print " z=" & Me.IMU.GyroZ();
+    Print " - Acc:";
+    Print " x=" & Me.IMU.AccelerometerX();
+    Print " y=" & Me.IMU.AccelerometerY();
+    Print " z=" & Me.IMU.AccelerometerZ()
+
+  Wend
+
+End
+
+Public Sub Main()
+
+  Dim Y As Integer
+  Dim I As Integer
+  Dim Spacer As String
+
+  While True
+
+    Y = Me.IMU.GyroY()
+
+    If Y < -1400 Then
+      I = 0
+    Else If Y > 1400 Then
+      I = 600
+    Else
+      I = (Y / 1400 * 600) + 300
+    Endif
+
+    If I > 0 Then
+      Spacer = Space(I)
+    Endif
+
+    Print Spacer & "|"
+
+  Wend
+
+End
