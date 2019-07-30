@@ -1,7 +1,7 @@
 # Gambas Project File 3.0
 Title=BerryIMU
 Startup=FMain
-Version=1.6.0
+Version=2.3.0
 Component=gb.image
 Component=gb.gui
 Component=gb.form

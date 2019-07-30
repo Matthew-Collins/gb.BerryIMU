@@ -9,7 +9,7 @@ Path="gb.BerryIMU.gambas"
 
 [OpenFile]
 Count=1
-File[1]=".src/BerryIMU.class:0.23"
+File[1]=".src/i2c.class:0.72"
 Active=1
 
 [Watches]
